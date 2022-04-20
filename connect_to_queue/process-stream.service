@@ -1,0 +1,10 @@
+[Unit]
+Description=Queue processing service
+After=multi-user.target
+[Service]
+Type=simple
+Restart=always
+RestartSec=15
+ExecStart=/usr/bin/python3 /home/ec2-user/process_stream.py
+[Install]
+WantedBy=multi-user.target
